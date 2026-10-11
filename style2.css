@@ -1,0 +1,356 @@
+/* ==============================
+   GENERAL
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+
+    background: #eeeeee;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==============================
+   CARD CONTAINER
+   ============================== */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* ==============================
+   BUSINESS CARD
+   ============================== */
+
+.card {
+    position: relative;
+
+    width: 750px;
+    height: 423px;
+
+    overflow: hidden;
+
+    background: #000000;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==============================
+   FRONT BACKGROUND
+   ============================== */
+
+.front-background {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* ==============================
+   BACK BACKGROUND
+   ============================== */
+
+.background {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* ==============================
+   PHONE ICON
+   ============================== */
+
+.call-icon {
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    top: 65px;
+    left: 140px;
+
+    object-fit: contain;
+
+    z-index: 3;
+}
+
+
+/* ==============================
+   CONTACT INFORMATION
+   ============================== */
+
+.contact-info {
+    position: absolute;
+
+    top: 180px;
+    left: 100px;
+
+    width: 360px;
+
+    text-align: left;
+
+    color: white;
+
+    z-index: 3;
+}
+
+.contact-info p {
+    margin: 0 0 18px 0;
+
+    font-size: 21px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* ==============================
+   LOGO CIRCLE
+   ============================== */
+
+.logo-circle {
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    display: ;
+
+    align-items: left;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #0B2D5C;
+
+    z-index: 3;
+}
+
+
+/* ==============================
+   LOGO IMAGE
+   ============================== */
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ==============================
+   FRONT LOGO POSITION
+   ============================== */
+
+.front-logo-circle {
+    width: 280px;
+    height: 280px;
+
+    top: 50px;
+    right: 70px;
+}
+
+
+/* ==============================
+   BACK LOGO POSITION
+   ============================== */
+
+.back-logo-circle {
+    width: 250px;
+    height: 250px;
+
+    top: 150px;
+    left: 70px;
+}
+
+
+/* ==============================
+   QR CODE
+   ============================== */
+
+.qr-code {
+    position: absolute;
+
+    width: 185px;
+    height: 185px;
+
+    top: 90px;
+    right: 125px;
+
+    object-fit: contain;
+
+    background: white;
+
+    z-index: 3;
+}
+
+
+/* ==============================
+   QR URL
+   ============================== */
+
+.qr-url {
+    position: absolute;
+
+    width: 410px;
+
+    right: 20px;
+    bottom: 60px;
+
+    padding: 14px 18px;
+
+    color: white;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    border: 1px solid white;
+
+    border-radius: 30px;
+
+    z-index: 3;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==============================
+   STUDENT INFORMATION
+   ============================== */
+
+.student-info {
+    margin-top: 40px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #000000;
+}
+
+.student-info p {
+    margin: 8px 0;
+}
+
+.student-info strong {
+    font-weight: bold;
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 750px;
+
+        height: auto;
+
+        aspect-ratio: 750 / 423;
+    }
+
+    .call-icon {
+        width: 10%;
+        height: auto;
+
+        top: 15%;
+        left: 18%;
+    }
+
+    .contact-info {
+        top: 42%;
+        left: 6%;
+
+        width: 45%;
+    }
+
+    .contact-info p {
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .logo-circle {
+        width: 39%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .front-logo-circle {
+        top: 16%;
+        right: 6%;
+    }
+
+    .back-logo-circle {
+        top: 16%;
+        left: 6%;
+    }
+
+    .qr-code {
+        width: 25%;
+        height: auto;
+
+        top: 21%;
+        right: 17%;
+    }
+
+    .qr-url {
+        width: 55%;
+
+        right: 5%;
+        bottom: 14%;
+
+        font-size: 2vw;
+
+        padding: 2% 3%;
+    }
+
+    .student-info {
+        font-size: 15px;
+    }
+}
